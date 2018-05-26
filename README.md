@@ -13,7 +13,7 @@ Smart Contract that sells tickets for lottery and draws winner for each step of 
   distribute winning amount & house edge, referral share amount
   and add amounts in each wallet (indexed by address)
   house edge will be sent directly to owner of contract
-  # there is an option to draw lottery manually by admin
+  - there is an option to draw lottery manually by admin
 3.Once drawn winner, next step starts
   as we discussed; 1000, 10k, ..., 10M, next 1000
 4.Users can withdraw with withdraw address, and ticket number
