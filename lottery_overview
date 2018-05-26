@@ -1,0 +1,31 @@
+- lottery starts with 1000 (threshold)
+  buy, buy with referral, buy bulk tickets are availble
+  tickets are identified and indexed by ticket number
+  ticket numbers are sold tickets, increasing as time being
+  each ticket have holder's address, ref ticket number, winning Amount and paid flag(boolean)
+  check ref number is valid
+- once soldTickets reached to threshold, draw randomly a winner
+  pick a random number between (start, start + threshold)
+  distribute winning amount & house edge, referral share amount
+  and add amounts in each wallet (indexed by address)
+  house edge will be sent directly to owner of contract
+  # there is an option to draw lottery manually by admin
+- once drawn winner, next step starts
+  as we discussed; 1000, 10k, ..., 10M, next 1000
+- users can withdraw with withdraw address, and ticket number
+  we check following;
+    @ valid address
+    @ msg.sender is the holder of the ticket
+    @ check the ticket was already paid
+    @ check the ticket is winning ticket and wallet balance is enough
+  send ticket winning amount to withdraw address, update ticket as paid, and subtract wallet balance  
+- users can withdraw all balances 
+- users can check winning ticket of last lottery
+- users can check his purchased ticket info
+- users can check his balance
+======= Admin functions ======
+- admin can set house edge
+- admin can set ticket price
+- admin can set referral share
+- admin can pause/resume lottery
+- admin can destroy contract anytime
